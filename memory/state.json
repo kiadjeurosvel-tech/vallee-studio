@@ -1,10 +1,10 @@
 {
- "episode": 0,
- "last_date": null,
+ "episode": 1,
+ "last_date": "2026-11-09",
  "last_choice": {
-  "question": "Début de la série",
-  "A": "Commencer",
-  "B": "Commencer"
+  "question": "Plus que deux jours de vivres. Que faire ?",
+  "A": "Chasser tous ensemble dans la forêt violette",
+  "B": "Laisser Nala partir seule, plus loin"
  },
- "summary": "Dix fondateurs arrivent dans la Vallée des Horizons."
+ "summary": "Dix survivants arrivent dans une vallée vierge et inconnue, sans loi ni maison. Ils dressent deux abris près de la rivière et n'ont que deux jours de nourriture. Bo aperçoit des ruines sur le Rocher des Anciens ; Grumm, visiblement effrayé, interdit à quiconque d'y monter. Varn, le conteur, raconte cette histoire des années plus tard. Nala veut partir seule chercher de la nourriture ; Grumm refuse."
 }

@@ -5,7 +5,7 @@
   "phrase_signature": "Ce monde n'existe que par vos choix. Et chaque erreur restera dans son histoire.",
   "langue": "fr",
   "version": 1,
-  "episode_actuel": 0,
+  "episode_actuel": 1,
   "annee_monde": 1,
   "image_episode_1": "assets/vallee_ep1.png"
  },
@@ -97,5 +97,19 @@
   "routes": [],
   "frontieres": []
  },
- "history": []
+ "history": [
+  {
+   "episode": 1,
+   "date": "2026-11-09",
+   "title": "Les dix premiers",
+   "location": "village_premiers",
+   "vote_precedent": "B",
+   "choice": {
+    "question": "Plus que deux jours de vivres. Que faire ?",
+    "A": "Chasser tous ensemble dans la forêt violette",
+    "B": "Laisser Nala partir seule, plus loin"
+   },
+   "source": "manuel"
+  }
+ ]
 }

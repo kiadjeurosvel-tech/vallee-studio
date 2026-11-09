@@ -1,0 +1,61 @@
+{
+ "ok": true,
+ "errors": [],
+ "warnings": [
+  "22 saccade(s) détectée(s) hors coupes (images [481, 482, 483, 484, 485, 486, 487, 488])"
+ ],
+ "metrics": {
+  "duration": 59.77,
+  "size_mb": 24.71,
+  "width": 1080,
+  "height": 1920,
+  "fps": 30.0,
+  "vcodec": "h264",
+  "pix_fmt": "yuv420p",
+  "acodec": "aac",
+  "channels": 2,
+  "sample_rate": "48000",
+  "black_segments": [],
+  "loudness_lufs": -14.8,
+  "true_peak_db": -1.3,
+  "silences": 0,
+  "motion_median": 0.239,
+  "jerks": 22,
+  "jerk_frames": [
+   481,
+   482,
+   483,
+   484,
+   485,
+   486,
+   487,
+   488,
+   753,
+   754,
+   755,
+   756,
+   761,
+   762,
+   763,
+   764,
+   1058,
+   1059,
+   1060,
+   1061
+  ],
+  "frozen_frames": 0,
+  "mean_luma": 63.0,
+  "min_luma": 1.3,
+  "longest_shot_s": 7.17,
+  "subtitle_events": 19,
+  "tts_engines": [
+   "piper:fr_FR-siwis-medium",
+   "piper:fr_FR-tom-medium",
+   "piper:fr_FR-upmc-medium"
+  ],
+  "lipsync": [
+   "rhubarb"
+  ]
+ },
+ "episode": 1
+}
