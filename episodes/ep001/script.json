@@ -1,0 +1,80 @@
+{
+ "title": "Les dix premiers",
+ "lines": [
+  {
+   "speaker": "VARN",
+   "text": "Je m'appelle Varn. Je me souviens de tout. Même du jour où nous n'étions que dix.",
+   "emotion": "neutral"
+  },
+  {
+   "speaker": "VARN",
+   "text": "Dix survivants. Sans nom, sans loi, sans maison. Juste une vallée immense… et la faim.",
+   "emotion": "neutral"
+  },
+  {
+   "speaker": "BO",
+   "text": "Grumm ! Regarde ! De l'eau partout, et des arbres violets !",
+   "emotion": "neutral"
+  },
+  {
+   "speaker": "GRUMM",
+   "text": "Reste près du feu, Bo. Une vallée trop belle cache toujours ses dents.",
+   "emotion": "neutral"
+  },
+  {
+   "speaker": "RUKA",
+   "text": "Il nous reste deux jours de nourriture. Pas un de plus.",
+   "emotion": "neutral"
+  },
+  {
+   "speaker": "VARN",
+   "text": "Cette nuit-là, nous avons dressé deux abris. Les premiers de toute notre histoire.",
+   "emotion": "neutral"
+  },
+  {
+   "speaker": "BO",
+   "text": "Grumm… là-haut, sur le rocher. Ce sont des murs ? Qui les a construits ?",
+   "emotion": "neutral"
+  },
+  {
+   "speaker": "GRUMM",
+   "text": "Personne. Et personne n'y monte. Jamais.",
+   "emotion": "neutral"
+  },
+  {
+   "speaker": "VARN",
+   "text": "Je connaissais Grumm depuis trente ans. C'était la première fois que je le voyais avoir peur.",
+   "emotion": "neutral"
+  },
+  {
+   "speaker": "VARN",
+   "text": "Le lendemain, Nala voulut partir seule chercher à manger, loin. Grumm refusa. Ce jour-là, c'est vous qui avez tranché.",
+   "emotion": "neutral"
+  }
+ ],
+ "choice": {
+  "question": "Plus que deux jours de vivres. Que faire ?",
+  "A": "Chasser tous ensemble dans la forêt violette",
+  "B": "Laisser Nala partir seule, plus loin"
+ },
+ "caption": "Deux jours de nourriture. Nala veut partir seule. Grumm refuse. Vous décidez. Vote A ou B 👇",
+ "hashtags": [
+  "#lavalleedeshorizons",
+  "#serie",
+  "#civilisation",
+  "#histoire",
+  "#vote",
+  "#fantasy"
+ ],
+ "summary": "Dix survivants arrivent dans une vallée vierge et inconnue, sans loi ni maison. Ils dressent deux abris près de la rivière et n'ont que deux jours de nourriture. Bo aperçoit des ruines sur le Rocher des Anciens ; Grumm, visiblement effrayé, interdit à quiconque d'y monter. Varn, le conteur, raconte cette histoire des années plus tard. Nala veut partir seule chercher de la nourriture ; Grumm refuse.",
+ "location": "village_premiers",
+ "tod": "day",
+ "weather": "clear",
+ "mood": "mystere",
+ "source": "manuel",
+ "number": 1,
+ "date": "2026-11-09",
+ "vote": "B",
+ "vote_source": "le destin (aucun vote)",
+ "status": "en_production"
+}
