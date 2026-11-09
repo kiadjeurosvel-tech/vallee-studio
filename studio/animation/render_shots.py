@@ -189,7 +189,7 @@ class Cam:
             if k == "reveal" and s.get("subject") in self.chars:
                 a = self.head(s["subject"])
                 start = (a[0], a[1], a[2] - 0.1)
-                e = 0.5 - 0.5 * math.cos(math.pi * min(1, u * 1.2))
+                e = 0.5 - 0.5 * math.cos(math.pi * min(1.0, max(0.0, (u - 0.1) / 0.8)))  # panoramique lent et doux
                 look = tuple(start[i] + (tgt[i] - start[i]) * e for i in range(3))
                 pos = (p0[0], p0[1] - 0.6 * u, p0[2] + 0.4 * u)
             else:
@@ -308,8 +308,9 @@ def main():
             continue
         stats.append(render_shot(shot, out, preview, only))
         print("PLAN", json.dumps(stats[-1]), flush=True)
-    with open(os.path.join(out, f"stats_{ids.replace(',', '_')[:60]}.json"), "w") as fh:
-        json.dump(stats, fh, indent=1)
+    if any(not s.get("skipped") for s in stats):  # une reprise ne doit pas effacer les mesures réelles
+        with open(os.path.join(out, f"stats_{ids.replace(',', '_')[:60]}.json"), "w") as fh:
+            json.dump(stats, fh, indent=1)
 
 
 if __name__ == "__main__":

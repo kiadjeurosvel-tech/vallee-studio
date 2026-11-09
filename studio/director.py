@@ -167,7 +167,7 @@ def plan(ep, work):
             cams = _choose_cameras(si, j, ln, sp, other, scn, tm, S)
             # découpe des répliques longues en deux plans
             if len(cams) > 1 and ((f1 - f0) / FPS > STYLE["shot"]["max_s"] or cams[1]["type"] == "reveal"):
-                mid = (f0 + f1) // 2
+                mid = (f0 + f1) // 2 if cams[1]["type"] != "reveal" else f0 + int((f1 - f0) * 0.38)
                 spans = [(f0, mid, cams[0]), (mid, f1, cams[1])]
             else:
                 spans = [(f0, f1, cams[0])]

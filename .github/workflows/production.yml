@@ -54,12 +54,17 @@ jobs:
           curl -sSL -o /tmp/rh.zip https://github.com/DanielSWolf/rhubarb-lip-sync/releases/download/v1.13.0/Rhubarb-Lip-Sync-1.13.0-Linux.zip \
             && unzip -q /tmp/rh.zip -d /opt && sudo ln -sf /opt/Rhubarb-Lip-Sync-1.13.0-Linux/rhubarb /usr/local/bin/rhubarb \
             || echo "::warning::Rhubarb indisponible : lip-sync acoustique"
-      - name: Cache modèles (voix Piper + LLM)
+      - name: Cache voix Piper
         uses: actions/cache@v4
         with:
-          path: .cache
-          key: models-v1-${{ hashFiles('config/studio.json', 'memory/characters.json') }}
-          restore-keys: models-v1-
+          path: .cache/piper
+          key: piper-v1-${{ hashFiles('memory/characters.json') }}
+          restore-keys: piper-v1-
+      - name: Cache modèle de langage (≈4,7 Go, téléchargé une seule fois)
+        uses: actions/cache@v4
+        with:
+          path: .cache/llm
+          key: llm-v1-${{ hashFiles('config/studio.json') }}
       - name: Reprise d'un épisode en cours
         uses: actions/cache/restore@v4
         with:
