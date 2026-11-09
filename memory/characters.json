@@ -1,0 +1,672 @@
+{
+ "_note": "RÉFÉRENCE FIGÉE. Le bloc 'reference' de chaque personnage (visage, proportions, vêtements, couleurs, voix) ne doit jamais être modifié par l'automatisation. tests/test_memory.py vérifie son empreinte (memory/reference.lock).",
+ "characters": {
+  "grumm": {
+   "id": "grumm",
+   "name": "Grumm",
+   "age": 52,
+   "sex": "homme",
+   "role": "Guide du groupe",
+   "personality": [
+    "prudent",
+    "autoritaire",
+    "protecteur"
+   ],
+   "skills": [
+    "orientation",
+    "survie",
+    "commandement"
+   ],
+   "ambition": "Garder tout le monde en vie.",
+   "secret": {
+    "texte": "Il a déjà vu le Rocher des Anciens : des squelettes et des armes. Il a fui et n'en parle jamais.",
+    "revele": false
+   },
+   "voice_description": "Grave, lente, posée, autorité calme.",
+   "canon_description": {
+    "couleur_signature": "brun",
+    "accessoire": "cape de fourrure brune, bâton gravé",
+    "description": "Carrure massive, barbe grise courte, visage buriné."
+   },
+   "status": "vivant",
+   "protected_until_episode": 15,
+   "reference": {
+    "look": {
+     "height": 1.86,
+     "build": 1.35,
+     "skin": "#8a5a3c",
+     "hair": {
+      "style": "short",
+      "color": "#6e6e6e"
+     },
+     "beard": {
+      "style": "short",
+      "color": "#7a7a7a"
+     },
+     "eyes": "#3b2a1a",
+     "brow_color": "#5a5a5a",
+     "tunic": "#6b4a2b",
+     "pants": "#3e2c1c",
+     "accessories": [
+      "fur_cape",
+      "staff"
+     ],
+     "cape_color": "#5a3b22",
+     "paint": null
+    },
+    "voice": {
+     "model": "fr_FR-upmc-medium",
+     "speaker": 1,
+     "length_scale": 1.08,
+     "pitch": -3,
+     "espeak": "fr+m3",
+     "espeak_pitch": 30
+    }
+   }
+  },
+  "ruka": {
+   "id": "ruka",
+   "name": "Ruka",
+   "age": 44,
+   "sex": "femme",
+   "role": "Guérisseuse",
+   "personality": [
+    "calme",
+    "énigmatique",
+    "calculatrice"
+   ],
+   "skills": [
+    "plantes médicinales",
+    "soins",
+    "persuasion"
+   ],
+   "ambition": "Être écoutée de tous.",
+   "secret": {
+    "texte": "Ses visions viennent de plantes de la forêt. Elle s'en sert pour influencer le groupe.",
+    "revele": false
+   },
+   "voice_description": "Douce, chuchotée, hypnotique.",
+   "canon_description": {
+    "couleur_signature": "blanc",
+    "accessoire": "peintures blanches au visage, collier d'os",
+    "description": "Mince, longs cheveux tressés, regard perçant."
+   },
+   "status": "vivant",
+   "protected_until_episode": 15,
+   "reference": {
+    "look": {
+     "height": 1.68,
+     "build": 0.9,
+     "skin": "#a86b46",
+     "hair": {
+      "style": "braids",
+      "color": "#1d1410"
+     },
+     "beard": null,
+     "eyes": "#2a1c12",
+     "brow_color": "#1d1410",
+     "tunic": "#e8e2d4",
+     "pants": "#8f8574",
+     "accessories": [
+      "bone_necklace"
+     ],
+     "paint": {
+      "color": "#f4f1ea",
+      "pattern": "cheek_lines"
+     }
+    },
+    "voice": {
+     "model": "fr_FR-upmc-medium",
+     "speaker": 0,
+     "length_scale": 1.05,
+     "pitch": -1,
+     "espeak": "fr+f4",
+     "espeak_pitch": 40
+    }
+   }
+  },
+  "taro": {
+   "id": "taro",
+   "name": "Taro",
+   "age": 30,
+   "sex": "homme",
+   "role": "Chasseur",
+   "personality": [
+    "courageux",
+    "impulsif",
+    "fier"
+   ],
+   "skills": [
+    "chasse",
+    "combat",
+    "pistage"
+   ],
+   "ambition": "Devenir chef.",
+   "secret": {
+    "texte": "Il méprise la prudence de Grumm et prépare en silence sa prise de pouvoir.",
+    "revele": false
+   },
+   "voice_description": "Énergique, tranchante, rapide.",
+   "canon_description": {
+    "couleur_signature": "rouge sombre",
+    "accessoire": "cicatrice sur l'œil gauche, lance",
+    "description": "Athlétique, cheveux courts, peintures de chasse."
+   },
+   "status": "vivant",
+   "protected_until_episode": null,
+   "reference": {
+    "look": {
+     "height": 1.8,
+     "build": 1.15,
+     "skin": "#7a4a2e",
+     "hair": {
+      "style": "short",
+      "color": "#120c08"
+     },
+     "beard": null,
+     "eyes": "#2b1a0e",
+     "brow_color": "#120c08",
+     "tunic": "#7a1f1f",
+     "pants": "#3a2418",
+     "accessories": [
+      "spear",
+      "scar_left_eye"
+     ],
+     "paint": {
+      "color": "#2a2a2a",
+      "pattern": "hunter_stripes"
+     }
+    },
+    "voice": {
+     "model": "fr_FR-gilles-low",
+     "speaker": 0,
+     "length_scale": 1.0,
+     "pitch": 0,
+     "espeak": "fr+m1",
+     "espeak_pitch": 45
+    }
+   }
+  },
+  "ile": {
+   "id": "ile",
+   "name": "Ilé",
+   "age": 28,
+   "sex": "femme",
+   "role": "Cueilleuse",
+   "personality": [
+    "observatrice",
+    "patiente",
+    "pragmatique"
+   ],
+   "skills": [
+    "cueillette",
+    "connaissance des graines",
+    "conservation"
+   ],
+   "ambition": "Ne plus jamais avoir faim.",
+   "secret": {
+    "texte": "Elle a remarqué que les graines tombées repoussent. Première idée de l'agriculture.",
+    "revele": false
+   },
+   "voice_description": "Chaleureuse, claire, posée.",
+   "canon_description": {
+    "couleur_signature": "vert",
+    "accessoire": "foulard vert, panier tressé",
+    "description": "Taille moyenne, cheveux noués, mains abîmées par le travail."
+   },
+   "status": "vivant",
+   "protected_until_episode": null,
+   "reference": {
+    "look": {
+     "height": 1.66,
+     "build": 1.0,
+     "skin": "#b07650",
+     "hair": {
+      "style": "bun",
+      "color": "#2a1a10"
+     },
+     "beard": null,
+     "eyes": "#3a2414",
+     "brow_color": "#2a1a10",
+     "tunic": "#3f7d3a",
+     "pants": "#5b4a2e",
+     "accessories": [
+      "scarf",
+      "basket"
+     ],
+     "scarf_color": "#4f9a46",
+     "paint": null
+    },
+    "voice": {
+     "model": "fr_FR-upmc-medium",
+     "speaker": 0,
+     "length_scale": 1.0,
+     "pitch": 1.5,
+     "espeak": "fr+f2",
+     "espeak_pitch": 55
+    }
+   }
+  },
+  "bo": {
+   "id": "bo",
+   "name": "Bo",
+   "age": 9,
+   "sex": "garçon",
+   "role": "Enfant explorateur",
+   "personality": [
+    "curieux",
+    "têtu",
+    "intrépide"
+   ],
+   "skills": [
+    "se faufiler",
+    "observer",
+    "mémoriser"
+   ],
+   "ambition": "Tout explorer.",
+   "secret": {
+    "texte": "Il a trouvé dans la Grotte des Légendes un outil en métal des Anciens. Personne ne sait travailler le métal.",
+    "revele": false
+   },
+   "voice_description": "Voix d'enfant vive, enthousiaste.",
+   "canon_description": {
+    "couleur_signature": "jaune ocre",
+    "accessoire": "tunique trop grande, pochette à la ceinture",
+    "description": "Petit, cheveux en bataille, grands yeux vifs."
+   },
+   "status": "vivant",
+   "protected_until_episode": 100,
+   "reference": {
+    "look": {
+     "height": 1.3,
+     "build": 0.85,
+     "skin": "#9c6240",
+     "hair": {
+      "style": "messy",
+      "color": "#1a110b"
+     },
+     "beard": null,
+     "eyes": "#3a2414",
+     "brow_color": "#1a110b",
+     "tunic": "#c8952e",
+     "pants": "#6a4a28",
+     "accessories": [
+      "pouch"
+     ],
+     "paint": null,
+     "child": true
+    },
+    "voice": {
+     "model": "fr_FR-siwis-medium",
+     "speaker": 0,
+     "length_scale": 0.95,
+     "pitch": 3,
+     "espeak": "fr+f5",
+     "espeak_pitch": 75
+    }
+   }
+  },
+  "sena": {
+   "id": "sena",
+   "name": "Sena",
+   "age": 35,
+   "sex": "femme",
+   "role": "Bâtisseuse",
+   "personality": [
+    "perfectionniste",
+    "discrète",
+    "obstinée"
+   ],
+   "skills": [
+    "construction",
+    "argile",
+    "taille de pierre"
+   ],
+   "ambition": "Construire quelque chose qui dure.",
+   "secret": {
+    "texte": "Elle taille la pierre comme les Anciens. Elle refuse de dire où elle a appris.",
+    "revele": false
+   },
+   "voice_description": "Sèche, directe, peu de mots.",
+   "canon_description": {
+    "couleur_signature": "orange terre",
+    "accessoire": "bandeau ocre, mains tachées d'argile",
+    "description": "Robuste, avant-bras musclés, cheveux courts."
+   },
+   "status": "vivant",
+   "protected_until_episode": null,
+   "reference": {
+    "look": {
+     "height": 1.72,
+     "build": 1.2,
+     "skin": "#8d5a38",
+     "hair": {
+      "style": "short",
+      "color": "#3a2416"
+     },
+     "beard": null,
+     "eyes": "#2e1d10",
+     "brow_color": "#3a2416",
+     "tunic": "#c2632b",
+     "pants": "#5a3a22",
+     "accessories": [
+      "headband"
+     ],
+     "headband_color": "#b5832e",
+     "paint": null
+    },
+    "voice": {
+     "model": "fr_FR-siwis-medium",
+     "speaker": 0,
+     "length_scale": 1.02,
+     "pitch": -1.5,
+     "espeak": "fr+f3",
+     "espeak_pitch": 40
+    }
+   }
+  },
+  "oren": {
+   "id": "oren",
+   "name": "Oren",
+   "age": 40,
+   "sex": "homme",
+   "role": "Troqueur",
+   "personality": [
+    "charmeur",
+    "rusé",
+    "égoïste"
+   ],
+   "skills": [
+    "négociation",
+    "évaluation",
+    "mensonge"
+   ],
+   "ambition": "Posséder plus que les autres.",
+   "secret": {
+    "texte": "Il cache des réserves de nourriture volées au groupe.",
+    "revele": false
+   },
+   "voice_description": "Mielleuse, souriante, rythmée.",
+   "canon_description": {
+    "couleur_signature": "violet",
+    "accessoire": "sacoche en cuir, bracelets en os et pierre",
+    "description": "Sourire facile, barbe soignée, vêtements plus riches que les autres."
+   },
+   "status": "vivant",
+   "protected_until_episode": null,
+   "reference": {
+    "look": {
+     "height": 1.76,
+     "build": 1.1,
+     "skin": "#b47c55",
+     "hair": {
+      "style": "short",
+      "color": "#3b2614"
+     },
+     "beard": {
+      "style": "neat",
+      "color": "#3b2614"
+     },
+     "eyes": "#4a3018",
+     "brow_color": "#3b2614",
+     "tunic": "#6a3d8f",
+     "pants": "#3a2a4a",
+     "accessories": [
+      "satchel",
+      "bracelets"
+     ],
+     "paint": null
+    },
+    "voice": {
+     "model": "fr_FR-tom-medium",
+     "speaker": 0,
+     "length_scale": 0.95,
+     "pitch": 1.5,
+     "espeak": "fr+m2",
+     "espeak_pitch": 55
+    }
+   }
+  },
+  "nala": {
+   "id": "nala",
+   "name": "Nala",
+   "age": 19,
+   "sex": "femme",
+   "role": "Éclaireuse",
+   "personality": [
+    "rebelle",
+    "audacieuse",
+    "loyale envers sa sœur"
+   ],
+   "skills": [
+    "arc",
+    "course",
+    "repérage"
+   ],
+   "ambition": "Partir loin.",
+   "secret": {
+    "texte": "Elle prévoit de traverser seule les Terres Brûlées.",
+    "revele": false
+   },
+   "voice_description": "Jeune, vive, insolente.",
+   "canon_description": {
+    "couleur_signature": "rouge vif",
+    "accessoire": "arc, tresses rouges",
+    "description": "Fine, rapide, regard défiant."
+   },
+   "status": "vivant",
+   "protected_until_episode": null,
+   "reference": {
+    "look": {
+     "height": 1.7,
+     "build": 0.88,
+     "skin": "#9a5e3a",
+     "hair": {
+      "style": "braids",
+      "color": "#b3261e"
+     },
+     "beard": null,
+     "eyes": "#2a1a0e",
+     "brow_color": "#3a1a10",
+     "tunic": "#d0312d",
+     "pants": "#4a2a1a",
+     "accessories": [
+      "bow"
+     ],
+     "paint": null
+    },
+    "voice": {
+     "model": "fr_FR-siwis-medium",
+     "speaker": 0,
+     "length_scale": 0.92,
+     "pitch": 0.5,
+     "espeak": "fr+f1",
+     "espeak_pitch": 55
+    }
+   }
+  },
+  "varn": {
+   "id": "varn",
+   "name": "Varn",
+   "age": 63,
+   "sex": "homme",
+   "role": "Conteur et narrateur",
+   "personality": [
+    "sage",
+    "mélancolique",
+    "malicieux"
+   ],
+   "skills": [
+    "mémoire",
+    "récits",
+    "conseil"
+   ],
+   "ambition": "Que rien ne soit oublié.",
+   "secret": {
+    "texte": "Sa légende du Mont des Étoiles est un vrai souvenir déformé de la chute des Anciens.",
+    "revele": false
+   },
+   "voice_description": "Âgée, profonde, voix de conteur.",
+   "canon_description": {
+    "couleur_signature": "gris",
+    "accessoire": "manteau gris, yeux voilés",
+    "description": "Presque aveugle, longs cheveux blancs, s'appuie sur Bo."
+   },
+   "status": "vivant",
+   "protected_until_episode": 30,
+   "reference": {
+    "look": {
+     "height": 1.74,
+     "build": 0.95,
+     "skin": "#a07050",
+     "hair": {
+      "style": "long",
+      "color": "#eeeeea"
+     },
+     "beard": {
+      "style": "long",
+      "color": "#e6e6e2"
+     },
+     "eyes": "#c9d3d8",
+     "brow_color": "#e6e6e2",
+     "tunic": "#7d7f82",
+     "pants": "#4e5054",
+     "accessories": [
+      "long_coat"
+     ],
+     "cape_color": "#8a8c90",
+     "paint": null,
+     "old": true
+    },
+    "voice": {
+     "model": "fr_FR-tom-medium",
+     "speaker": 0,
+     "length_scale": 1.12,
+     "pitch": -1,
+     "espeak": "fr+m4",
+     "espeak_pitch": 35
+    }
+   }
+  },
+  "mira": {
+   "id": "mira",
+   "name": "Mira",
+   "age": 24,
+   "sex": "femme",
+   "role": "Pêcheuse",
+   "personality": [
+    "douce",
+    "médiatrice",
+    "intuitive"
+   ],
+   "skills": [
+    "pêche",
+    "nage",
+    "apaiser les conflits"
+   ],
+   "ambition": "Garder la paix.",
+   "secret": {
+    "texte": "Elle entend des chants venant de la Forêt Mystérieuse : un autre peuple vit là.",
+    "revele": false
+   },
+   "voice_description": "Douce, mélodieuse.",
+   "canon_description": {
+    "couleur_signature": "bleu",
+    "accessoire": "collier de coquillages bleus",
+    "description": "Cheveux longs souvent mouillés, sourire timide."
+   },
+   "status": "vivant",
+   "protected_until_episode": null,
+   "reference": {
+    "look": {
+     "height": 1.64,
+     "build": 0.92,
+     "skin": "#a96e48",
+     "hair": {
+      "style": "long",
+      "color": "#1a1410"
+     },
+     "beard": null,
+     "eyes": "#2e1d10",
+     "brow_color": "#1a1410",
+     "tunic": "#2f6db5",
+     "pants": "#3a4a5a",
+     "accessories": [
+      "shell_necklace"
+     ],
+     "paint": null
+    },
+    "voice": {
+     "model": "fr_FR-siwis-medium",
+     "speaker": 0,
+     "length_scale": 1.0,
+     "pitch": 1.5,
+     "espeak": "fr+f2",
+     "espeak_pitch": 60
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "a": "taro",
+   "b": "ile",
+   "type": "couple",
+   "intensite": 80
+  },
+  {
+   "a": "taro",
+   "b": "bo",
+   "type": "parent",
+   "intensite": 70
+  },
+  {
+   "a": "ile",
+   "b": "bo",
+   "type": "parent",
+   "intensite": 90
+  },
+  {
+   "a": "nala",
+   "b": "mira",
+   "type": "soeurs",
+   "intensite": 85
+  },
+  {
+   "a": "grumm",
+   "b": "taro",
+   "type": "rivalite",
+   "intensite": 60
+  },
+  {
+   "a": "grumm",
+   "b": "varn",
+   "type": "vieille_amitie",
+   "intensite": 75
+  },
+  {
+   "a": "varn",
+   "b": "bo",
+   "type": "mentor",
+   "intensite": 80
+  },
+  {
+   "a": "ruka",
+   "b": "grumm",
+   "type": "alliance_fragile",
+   "intensite": 50
+  },
+  {
+   "a": "oren",
+   "b": "sena",
+   "type": "mefiance",
+   "intensite": 40
+  },
+  {
+   "a": "nala",
+   "b": "grumm",
+   "type": "defi",
+   "intensite": 55
+  }
+ ]
+}

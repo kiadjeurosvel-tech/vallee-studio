@@ -1,0 +1,714 @@
+{
+ "grille": "8x8, colonnes A-H (ouest→est), lignes 1-8 (nord→sud)",
+ "nord": "haut",
+ "riviere": {
+  "nom": "Rivière des Horizons",
+  "trace": [
+   "D1",
+   "D2",
+   "D3",
+   "D4",
+   "E4",
+   "D5",
+   "D6",
+   "E7",
+   "F8"
+  ],
+  "note": "Naît en cascade au Mont des Étoiles, traverse le Lac Cristal, sépare le Village (ouest) des Terres Fertiles (est), sort au sud."
+ },
+ "lieux": [
+  {
+   "id": "mont_etoiles",
+   "nom": "Mont des Étoiles",
+   "cases": [
+    "C1",
+    "D1",
+    "E1"
+   ],
+   "type": "montagne",
+   "etat_initial": "Sommet enneigé, cascade alimentant la vallée.",
+   "ressources": [
+    "eau",
+    "pierre"
+   ],
+   "dangers": [
+    "froid",
+    "chutes"
+   ],
+   "mystere": "Source de toute l'eau de la vallée ; sacrée parce que vitale."
+  },
+  {
+   "id": "lac_cristal",
+   "nom": "Lac Cristal",
+   "cases": [
+    "D4",
+    "E4"
+   ],
+   "type": "lac",
+   "etat_initial": "Lac clair et poissonneux.",
+   "ressources": [
+    "eau",
+    "poisson"
+   ],
+   "dangers": [
+    "noyade"
+   ],
+   "mystere": null
+  },
+  {
+   "id": "foret_mysterieuse",
+   "nom": "Forêt Mystérieuse",
+   "cases": [
+    "A3",
+    "B3",
+    "A4",
+    "B4"
+   ],
+   "type": "foret",
+   "etat_initial": "Forêt dense d'arbres au feuillage violet, espèce unique à la vallée.",
+   "ressources": [
+    "bois",
+    "plantes",
+    "teinture violette",
+    "gibier"
+   ],
+   "dangers": [
+    "prédateurs",
+    "plantes toxiques"
+   ],
+   "mystere": "Un peuple caché y vit. Des chants s'en échappent la nuit."
+  },
+  {
+   "id": "village_premiers",
+   "nom": "Village des Premiers",
+   "cases": [
+    "B6"
+   ],
+   "type": "habitat",
+   "etat_initial": "Camp de 3 abris en branchages autour d'un feu.",
+   "ressources": [],
+   "dangers": [],
+   "mystere": null
+  },
+  {
+   "id": "terres_fertiles",
+   "nom": "Terres Fertiles",
+   "cases": [
+    "E6",
+    "F6",
+    "F5"
+   ],
+   "type": "plaine",
+   "etat_initial": "Plaines sauvages, herbes hautes, aucune culture.",
+   "ressources": [
+    "graines sauvages",
+    "fruits",
+    "gibier"
+   ],
+   "dangers": [
+    "animaux sauvages"
+   ],
+   "mystere": null
+  },
+  {
+   "id": "rocher_anciens",
+   "nom": "Rocher des Anciens",
+   "cases": [
+    "G2"
+   ],
+   "type": "ruines",
+   "etat_initial": "Ruines d'une forteresse en pierre taillée, envahies par la végétation.",
+   "ressources": [
+    "pierre taillée",
+    "objets anciens"
+   ],
+   "dangers": [
+    "effondrements"
+   ],
+   "mystere": "Un peuple humain plus avancé a vécu ici puis a disparu. Cause inconnue (guerre, famine, éruption ?)."
+  },
+  {
+   "id": "terres_brulees",
+   "nom": "Terres Brûlées",
+   "cases": [
+    "H3",
+    "H4"
+   ],
+   "type": "zone_volcanique",
+   "etat_initial": "Volcan actif, coulées de lave, sol noir.",
+   "ressources": [
+    "obsidienne",
+    "minerais"
+   ],
+   "dangers": [
+    "lave",
+    "gaz",
+    "éruptions"
+   ],
+   "mystere": "Lien possible avec la chute des Anciens."
+  },
+  {
+   "id": "grotte_legendes",
+   "nom": "Grotte des Légendes",
+   "cases": [
+    "G8"
+   ],
+   "type": "grotte",
+   "etat_initial": "Grande grotte au bord de la rivière, champignons phosphorescents naturels.",
+   "ressources": [
+    "abri",
+    "minerais"
+   ],
+   "dangers": [
+    "obscurité",
+    "éboulements"
+   ],
+   "mystere": "Contient des traces et objets des Anciens."
+  }
+ ],
+ "lieu_a_trancher": {
+  "description": "Ruines visibles à l'ouest sur le visuel de référence, sans nom.",
+  "decision": "Nommer comme 9e lieu ou supprimer des prochains visuels."
+ },
+ "sets3d": {
+  "_note": "Disposition 3D de référence de chaque lieu. seed fixe = même décor à chaque épisode. Axes : +Y = nord, +X = est (cohérent avec la carte 8x8). Ne modifier que via une décision d'histoire consignée dans world.json.",
+  "village_premiers": {
+   "seed": 601,
+   "ground": "#5f7a3a",
+   "ground2": "#7d6a45",
+   "relief": 0.6,
+   "trees": {
+    "count": 38,
+    "kind": "broadleaf",
+    "color": "#3f6e2c",
+    "ring": [
+     14,
+     40
+    ]
+   },
+   "grass": {
+    "count": 420,
+    "color": "#6f8f3a"
+   },
+   "rocks": 14,
+   "water": {
+    "type": "river",
+    "x": 11,
+    "width": 5
+   },
+   "structures": [
+    {
+     "type": "shelter",
+     "pos": [
+      -3.5,
+      3.0
+     ],
+     "rot": 20
+    },
+    {
+     "type": "shelter",
+     "pos": [
+      3.8,
+      4.2
+     ],
+     "rot": -25
+    },
+    {
+     "type": "campfire",
+     "pos": [
+      0,
+      0
+     ]
+    },
+    {
+     "type": "logs",
+     "pos": [
+      0,
+      0
+     ]
+    }
+   ],
+   "landmarks": [
+    {
+     "type": "mountain",
+     "pos": [
+      6,
+      170
+     ],
+     "h": 70,
+     "snow": true
+    },
+    {
+     "type": "ruins_far",
+     "pos": [
+      95,
+      120
+     ],
+     "h": 10
+    },
+    {
+     "type": "violet_forest_far",
+     "pos": [
+      -80,
+      40
+     ]
+    }
+   ],
+   "marks": {
+    "center": [
+     0.6,
+     -2.9
+    ],
+    "fire": [
+     0,
+     0
+    ],
+    "left": [
+     -2.2,
+     -0.8
+    ],
+    "right": [
+     2.2,
+     -0.6
+    ],
+    "back": [
+     0,
+     2.2
+    ],
+    "entry": [
+     -9,
+     -6
+    ],
+    "shelter": [
+     -3.5,
+     1.8
+    ],
+    "river": [
+     8.5,
+     -1
+    ],
+    "lookout": [
+     3,
+     7
+    ]
+   },
+   "fog": 0.012
+  },
+  "lac_cristal": {
+   "seed": 404,
+   "ground": "#6b8a45",
+   "ground2": "#9a8a60",
+   "relief": 0.4,
+   "trees": {
+    "count": 26,
+    "kind": "broadleaf",
+    "color": "#3f7a34",
+    "ring": [
+     16,
+     45
+    ]
+   },
+   "grass": {
+    "count": 300,
+    "color": "#7a9a42"
+   },
+   "rocks": 20,
+   "water": {
+    "type": "lake",
+    "center": [
+     0,
+     14
+    ],
+    "radius": 12
+   },
+   "reeds": 40,
+   "landmarks": [
+    {
+     "type": "mountain",
+     "pos": [
+      0,
+      160
+     ],
+     "h": 80,
+     "snow": true
+    }
+   ],
+   "marks": {
+    "center": [
+     0,
+     -1
+    ],
+    "left": [
+     -2,
+     -0.5
+    ],
+    "right": [
+     2,
+     -0.3
+    ],
+    "shore": [
+     0,
+     1.6
+    ],
+    "back": [
+     0,
+     0.5
+    ],
+    "entry": [
+     -8,
+     -7
+    ]
+   },
+   "fog": 0.008
+  },
+  "foret_mysterieuse": {
+   "seed": 313,
+   "ground": "#3b4a2c",
+   "ground2": "#4a3b4f",
+   "relief": 0.8,
+   "trees": {
+    "count": 90,
+    "kind": "violet",
+    "color": "#7b3fa0",
+    "ring": [
+     3.5,
+     38
+    ]
+   },
+   "grass": {
+    "count": 260,
+    "color": "#4f5f34"
+   },
+   "rocks": 10,
+   "ferns": 60,
+   "light_shafts": true,
+   "landmarks": [],
+   "marks": {
+    "center": [
+     0,
+     -1
+    ],
+    "left": [
+     -1.8,
+     -0.6
+    ],
+    "right": [
+     1.8,
+     -0.4
+    ],
+    "back": [
+     0,
+     2
+    ],
+    "entry": [
+     -6,
+     -8
+    ],
+    "deep": [
+     2,
+     9
+    ]
+   },
+   "fog": 0.05
+  },
+  "terres_fertiles": {
+   "seed": 512,
+   "ground": "#8a8a40",
+   "ground2": "#a69a55",
+   "relief": 0.5,
+   "trees": {
+    "count": 10,
+    "kind": "broadleaf",
+    "color": "#5a7a2c",
+    "ring": [
+     20,
+     60
+    ]
+   },
+   "grass": {
+    "count": 900,
+    "color": "#b0a24a",
+    "tall": true
+   },
+   "rocks": 6,
+   "landmarks": [
+    {
+     "type": "mountain",
+     "pos": [
+      -30,
+      170
+     ],
+     "h": 70,
+     "snow": true
+    },
+    {
+     "type": "volcano",
+     "pos": [
+      120,
+      60
+     ],
+     "h": 45
+    }
+   ],
+   "marks": {
+    "center": [
+     0,
+     -1
+    ],
+    "left": [
+     -2,
+     -0.5
+    ],
+    "right": [
+     2,
+     -0.4
+    ],
+    "back": [
+     0,
+     2.5
+    ],
+    "entry": [
+     -10,
+     -5
+    ]
+   },
+   "fog": 0.01
+  },
+  "rocher_anciens": {
+   "seed": 707,
+   "ground": "#6a6a58",
+   "ground2": "#5a5e44",
+   "relief": 1.2,
+   "trees": {
+    "count": 14,
+    "kind": "broadleaf",
+    "color": "#4a6a2e",
+    "ring": [
+     12,
+     40
+    ]
+   },
+   "grass": {
+    "count": 220,
+    "color": "#6a7a3a"
+   },
+   "rocks": 30,
+   "structures": [
+    {
+     "type": "ruins",
+     "pos": [
+      0,
+      8
+     ]
+    }
+   ],
+   "landmarks": [
+    {
+     "type": "mountain",
+     "pos": [
+      -60,
+      150
+     ],
+     "h": 70,
+     "snow": true
+    }
+   ],
+   "marks": {
+    "center": [
+     0,
+     -1
+    ],
+    "left": [
+     -2,
+     -0.4
+    ],
+    "right": [
+     2,
+     -0.2
+    ],
+    "back": [
+     0,
+     3
+    ],
+    "entry": [
+     -7,
+     -9
+    ],
+    "gate": [
+     0,
+     5
+    ]
+   },
+   "fog": 0.02
+  },
+  "terres_brulees": {
+   "seed": 666,
+   "ground": "#2a2422",
+   "ground2": "#3a2a22",
+   "relief": 1.4,
+   "trees": {
+    "count": 6,
+    "kind": "dead",
+    "color": "#2a201a",
+    "ring": [
+     8,
+     40
+    ]
+   },
+   "grass": {
+    "count": 0,
+    "color": "#000000"
+   },
+   "rocks": 40,
+   "lava": true,
+   "smoke_plumes": 4,
+   "landmarks": [
+    {
+     "type": "volcano",
+     "pos": [
+      10,
+      90
+     ],
+     "h": 60,
+     "active": true
+    }
+   ],
+   "marks": {
+    "center": [
+     0,
+     -1
+    ],
+    "left": [
+     -2,
+     -0.5
+    ],
+    "right": [
+     2,
+     -0.3
+    ],
+    "back": [
+     0,
+     2
+    ],
+    "entry": [
+     -8,
+     -8
+    ]
+   },
+   "fog": 0.03
+  },
+  "grotte_legendes": {
+   "seed": 808,
+   "ground": "#3a3530",
+   "ground2": "#2a2622",
+   "relief": 0.3,
+   "cave": true,
+   "trees": {
+    "count": 0,
+    "kind": "broadleaf",
+    "color": "#000000",
+    "ring": [
+     0,
+     0
+    ]
+   },
+   "grass": {
+    "count": 0,
+    "color": "#000000"
+   },
+   "rocks": 30,
+   "mushrooms": 50,
+   "water": {
+    "type": "stream",
+    "x": 4,
+    "width": 2
+   },
+   "landmarks": [],
+   "marks": {
+    "center": [
+     0,
+     -1
+    ],
+    "left": [
+     -1.8,
+     -0.6
+    ],
+    "right": [
+     1.8,
+     -0.4
+    ],
+    "back": [
+     0,
+     2.2
+    ],
+    "entry": [
+     0,
+     -9
+    ]
+   },
+   "fog": 0.03
+  },
+  "mont_etoiles": {
+   "seed": 101,
+   "ground": "#8a8a8a",
+   "ground2": "#e8eef2",
+   "relief": 2.0,
+   "snow": true,
+   "trees": {
+    "count": 12,
+    "kind": "pine",
+    "color": "#2e4a32",
+    "ring": [
+     10,
+     40
+    ]
+   },
+   "grass": {
+    "count": 60,
+    "color": "#6a7a50"
+   },
+   "rocks": 40,
+   "waterfall": {
+    "pos": [
+     6,
+     14
+    ],
+    "h": 18
+   },
+   "landmarks": [
+    {
+     "type": "mountain",
+     "pos": [
+      0,
+      90
+     ],
+     "h": 90,
+     "snow": true
+    }
+   ],
+   "marks": {
+    "center": [
+     0,
+     -1
+    ],
+    "left": [
+     -2,
+     -0.5
+    ],
+    "right": [
+     2,
+     -0.3
+    ],
+    "back": [
+     0,
+     2
+    ],
+    "entry": [
+     -7,
+     -8
+    ]
+   },
+   "fog": 0.02
+  }
+ }
+}

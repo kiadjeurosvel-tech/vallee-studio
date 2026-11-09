@@ -1,0 +1,654 @@
+{
+  "meta": {
+    "titre": "La Vallée des Horizons",
+    "slogan": "Notre monde. Nos choix.",
+    "phrase_signature": "Ce monde n'existe que par vos choix. Et chaque erreur restera dans son histoire.",
+    "langue": "fr",
+    "version": 1,
+    "episode_actuel": 0,
+    "annee_monde": 1,
+    "image_episode_1": "assets/vallee_ep1.png"
+  },
+  "canon": {
+    "genre": "Monde imaginaire épique, sans aucun surnaturel",
+    "regles": [
+      "Aucune magie, aucune créature fantastique, aucune lueur surnaturelle.",
+      "Tout s'explique par la nature, la technique ou les décisions humaines.",
+      "Les montagnes et les cours d'eau ne changent jamais de position.",
+      "Les bâtiments évoluent mais restent à leur emplacement.",
+      "Les villages peuvent devenir des villes ; les routes peuvent être construites.",
+      "Les forêts peuvent être détruites ou étendues.",
+      "Les frontières évoluent selon les décisions.",
+      "Chaque changement historique reste visible dans les épisodes suivants.",
+      "Une décision votée ne peut jamais être annulée."
+    ]
+  },
+  "carte": {
+    "grille": "8x8, colonnes A-H (ouest→est), lignes 1-8 (nord→sud)",
+    "nord": "haut",
+    "riviere": {
+      "nom": "Rivière des Horizons",
+      "trace": [
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "E4",
+        "D5",
+        "D6",
+        "E7",
+        "F8"
+      ],
+      "note": "Naît en cascade au Mont des Étoiles, traverse le Lac Cristal, sépare le Village (ouest) des Terres Fertiles (est), sort au sud."
+    },
+    "lieux": [
+      {
+        "id": "mont_etoiles",
+        "nom": "Mont des Étoiles",
+        "cases": [
+          "C1",
+          "D1",
+          "E1"
+        ],
+        "type": "montagne",
+        "etat_initial": "Sommet enneigé, cascade alimentant la vallée.",
+        "ressources": [
+          "eau",
+          "pierre"
+        ],
+        "dangers": [
+          "froid",
+          "chutes"
+        ],
+        "mystere": "Source de toute l'eau de la vallée ; sacrée parce que vitale."
+      },
+      {
+        "id": "lac_cristal",
+        "nom": "Lac Cristal",
+        "cases": [
+          "D4",
+          "E4"
+        ],
+        "type": "lac",
+        "etat_initial": "Lac clair et poissonneux.",
+        "ressources": [
+          "eau",
+          "poisson"
+        ],
+        "dangers": [
+          "noyade"
+        ],
+        "mystere": null
+      },
+      {
+        "id": "foret_mysterieuse",
+        "nom": "Forêt Mystérieuse",
+        "cases": [
+          "A3",
+          "B3",
+          "A4",
+          "B4"
+        ],
+        "type": "foret",
+        "etat_initial": "Forêt dense d'arbres au feuillage violet, espèce unique à la vallée.",
+        "ressources": [
+          "bois",
+          "plantes",
+          "teinture violette",
+          "gibier"
+        ],
+        "dangers": [
+          "prédateurs",
+          "plantes toxiques"
+        ],
+        "mystere": "Un peuple caché y vit. Des chants s'en échappent la nuit."
+      },
+      {
+        "id": "village_premiers",
+        "nom": "Village des Premiers",
+        "cases": [
+          "B6"
+        ],
+        "type": "habitat",
+        "etat_initial": "Camp de 3 abris en branchages autour d'un feu.",
+        "ressources": [],
+        "dangers": [],
+        "mystere": null
+      },
+      {
+        "id": "terres_fertiles",
+        "nom": "Terres Fertiles",
+        "cases": [
+          "E6",
+          "F6",
+          "F5"
+        ],
+        "type": "plaine",
+        "etat_initial": "Plaines sauvages, herbes hautes, aucune culture.",
+        "ressources": [
+          "graines sauvages",
+          "fruits",
+          "gibier"
+        ],
+        "dangers": [
+          "animaux sauvages"
+        ],
+        "mystere": null
+      },
+      {
+        "id": "rocher_anciens",
+        "nom": "Rocher des Anciens",
+        "cases": [
+          "G2"
+        ],
+        "type": "ruines",
+        "etat_initial": "Ruines d'une forteresse en pierre taillée, envahies par la végétation.",
+        "ressources": [
+          "pierre taillée",
+          "objets anciens"
+        ],
+        "dangers": [
+          "effondrements"
+        ],
+        "mystere": "Un peuple humain plus avancé a vécu ici puis a disparu. Cause inconnue (guerre, famine, éruption ?)."
+      },
+      {
+        "id": "terres_brulees",
+        "nom": "Terres Brûlées",
+        "cases": [
+          "H3",
+          "H4"
+        ],
+        "type": "zone_volcanique",
+        "etat_initial": "Volcan actif, coulées de lave, sol noir.",
+        "ressources": [
+          "obsidienne",
+          "minerais"
+        ],
+        "dangers": [
+          "lave",
+          "gaz",
+          "éruptions"
+        ],
+        "mystere": "Lien possible avec la chute des Anciens."
+      },
+      {
+        "id": "grotte_legendes",
+        "nom": "Grotte des Légendes",
+        "cases": [
+          "G8"
+        ],
+        "type": "grotte",
+        "etat_initial": "Grande grotte au bord de la rivière, champignons phosphorescents naturels.",
+        "ressources": [
+          "abri",
+          "minerais"
+        ],
+        "dangers": [
+          "obscurité",
+          "éboulements"
+        ],
+        "mystere": "Contient des traces et objets des Anciens."
+      }
+    ],
+    "lieu_a_trancher": {
+      "description": "Ruines visibles à l'ouest sur le visuel de référence, sans nom.",
+      "decision": "Nommer comme 9e lieu ou supprimer des prochains visuels."
+    }
+  },
+  "etat_monde": {
+    "population": 10,
+    "nourriture": 30,
+    "eau": 80,
+    "bois": 10,
+    "pierre": 0,
+    "moral": 60,
+    "sante": 70,
+    "note_echelle": "Valeurs de 0 à 100 sauf population.",
+    "batiments": [
+      {
+        "type": "abri",
+        "nombre": 2,
+        "lieu": "village_premiers"
+      },
+      {
+        "type": "feu de camp",
+        "nombre": 1,
+        "lieu": "village_premiers"
+      }
+    ],
+    "technologies": [
+      "feu (entretenu, pas encore maîtrisé)",
+      "outils en pierre taillée"
+    ],
+    "decouvertes": [],
+    "routes": [],
+    "frontieres": []
+  },
+  "narrateur": {
+    "actuel": "varn",
+    "succession": [
+      "bo"
+    ],
+    "formule_ouverture": "Je m'appelle Varn. Je me souviens de tout.",
+    "regle": "Le narrateur raconte chaque épisode. À sa mort, le suivant de la liste reprend la chronique."
+  },
+  "personnages": [
+    {
+      "id": "grumm",
+      "nom": "Grumm",
+      "age": 52,
+      "sexe": "homme",
+      "role": "Guide du groupe",
+      "personnalite": [
+        "prudent",
+        "autoritaire",
+        "protecteur"
+      ],
+      "competences": [
+        "orientation",
+        "survie",
+        "commandement"
+      ],
+      "ambition": "Garder tout le monde en vie.",
+      "secret": {
+        "texte": "Il a déjà vu le Rocher des Anciens : des squelettes et des armes. Il a fui et n'en parle jamais.",
+        "revele": false
+      },
+      "apparence": {
+        "couleur_signature": "brun",
+        "accessoire": "cape de fourrure brune, bâton gravé",
+        "description": "Carrure massive, barbe grise courte, visage buriné."
+      },
+      "voix": "Grave, lente, posée, autorité calme.",
+      "statut": "vivant",
+      "protege_jusqu_episode": 15
+    },
+    {
+      "id": "ruka",
+      "nom": "Ruka",
+      "age": 44,
+      "sexe": "femme",
+      "role": "Guérisseuse",
+      "personnalite": [
+        "calme",
+        "énigmatique",
+        "calculatrice"
+      ],
+      "competences": [
+        "plantes médicinales",
+        "soins",
+        "persuasion"
+      ],
+      "ambition": "Être écoutée de tous.",
+      "secret": {
+        "texte": "Ses visions viennent de plantes de la forêt. Elle s'en sert pour influencer le groupe.",
+        "revele": false
+      },
+      "apparence": {
+        "couleur_signature": "blanc",
+        "accessoire": "peintures blanches au visage, collier d'os",
+        "description": "Mince, longs cheveux tressés, regard perçant."
+      },
+      "voix": "Douce, chuchotée, hypnotique.",
+      "statut": "vivant",
+      "protege_jusqu_episode": 15
+    },
+    {
+      "id": "taro",
+      "nom": "Taro",
+      "age": 30,
+      "sexe": "homme",
+      "role": "Chasseur",
+      "personnalite": [
+        "courageux",
+        "impulsif",
+        "fier"
+      ],
+      "competences": [
+        "chasse",
+        "combat",
+        "pistage"
+      ],
+      "ambition": "Devenir chef.",
+      "secret": {
+        "texte": "Il méprise la prudence de Grumm et prépare en silence sa prise de pouvoir.",
+        "revele": false
+      },
+      "apparence": {
+        "couleur_signature": "rouge sombre",
+        "accessoire": "cicatrice sur l'œil gauche, lance",
+        "description": "Athlétique, cheveux courts, peintures de chasse."
+      },
+      "voix": "Énergique, tranchante, rapide.",
+      "statut": "vivant",
+      "protege_jusqu_episode": null
+    },
+    {
+      "id": "ile",
+      "nom": "Ilé",
+      "age": 28,
+      "sexe": "femme",
+      "role": "Cueilleuse",
+      "personnalite": [
+        "observatrice",
+        "patiente",
+        "pragmatique"
+      ],
+      "competences": [
+        "cueillette",
+        "connaissance des graines",
+        "conservation"
+      ],
+      "ambition": "Ne plus jamais avoir faim.",
+      "secret": {
+        "texte": "Elle a remarqué que les graines tombées repoussent. Première idée de l'agriculture.",
+        "revele": false
+      },
+      "apparence": {
+        "couleur_signature": "vert",
+        "accessoire": "foulard vert, panier tressé",
+        "description": "Taille moyenne, cheveux noués, mains abîmées par le travail."
+      },
+      "voix": "Chaleureuse, claire, posée.",
+      "statut": "vivant",
+      "protege_jusqu_episode": null
+    },
+    {
+      "id": "bo",
+      "nom": "Bo",
+      "age": 9,
+      "sexe": "garçon",
+      "role": "Enfant explorateur",
+      "personnalite": [
+        "curieux",
+        "têtu",
+        "intrépide"
+      ],
+      "competences": [
+        "se faufiler",
+        "observer",
+        "mémoriser"
+      ],
+      "ambition": "Tout explorer.",
+      "secret": {
+        "texte": "Il a trouvé dans la Grotte des Légendes un outil en métal des Anciens. Personne ne sait travailler le métal.",
+        "revele": false
+      },
+      "apparence": {
+        "couleur_signature": "jaune ocre",
+        "accessoire": "tunique trop grande, pochette à la ceinture",
+        "description": "Petit, cheveux en bataille, grands yeux vifs."
+      },
+      "voix": "Voix d'enfant vive, enthousiaste.",
+      "statut": "vivant",
+      "protege_jusqu_episode": 100
+    },
+    {
+      "id": "sena",
+      "nom": "Sena",
+      "age": 35,
+      "sexe": "femme",
+      "role": "Bâtisseuse",
+      "personnalite": [
+        "perfectionniste",
+        "discrète",
+        "obstinée"
+      ],
+      "competences": [
+        "construction",
+        "argile",
+        "taille de pierre"
+      ],
+      "ambition": "Construire quelque chose qui dure.",
+      "secret": {
+        "texte": "Elle taille la pierre comme les Anciens. Elle refuse de dire où elle a appris.",
+        "revele": false
+      },
+      "apparence": {
+        "couleur_signature": "orange terre",
+        "accessoire": "bandeau ocre, mains tachées d'argile",
+        "description": "Robuste, avant-bras musclés, cheveux courts."
+      },
+      "voix": "Sèche, directe, peu de mots.",
+      "statut": "vivant",
+      "protege_jusqu_episode": null
+    },
+    {
+      "id": "oren",
+      "nom": "Oren",
+      "age": 40,
+      "sexe": "homme",
+      "role": "Troqueur",
+      "personnalite": [
+        "charmeur",
+        "rusé",
+        "égoïste"
+      ],
+      "competences": [
+        "négociation",
+        "évaluation",
+        "mensonge"
+      ],
+      "ambition": "Posséder plus que les autres.",
+      "secret": {
+        "texte": "Il cache des réserves de nourriture volées au groupe.",
+        "revele": false
+      },
+      "apparence": {
+        "couleur_signature": "violet",
+        "accessoire": "sacoche en cuir, bracelets en os et pierre",
+        "description": "Sourire facile, barbe soignée, vêtements plus riches que les autres."
+      },
+      "voix": "Mielleuse, souriante, rythmée.",
+      "statut": "vivant",
+      "protege_jusqu_episode": null
+    },
+    {
+      "id": "nala",
+      "nom": "Nala",
+      "age": 19,
+      "sexe": "femme",
+      "role": "Éclaireuse",
+      "personnalite": [
+        "rebelle",
+        "audacieuse",
+        "loyale envers sa sœur"
+      ],
+      "competences": [
+        "arc",
+        "course",
+        "repérage"
+      ],
+      "ambition": "Partir loin.",
+      "secret": {
+        "texte": "Elle prévoit de traverser seule les Terres Brûlées.",
+        "revele": false
+      },
+      "apparence": {
+        "couleur_signature": "rouge vif",
+        "accessoire": "arc, tresses rouges",
+        "description": "Fine, rapide, regard défiant."
+      },
+      "voix": "Jeune, vive, insolente.",
+      "statut": "vivant",
+      "protege_jusqu_episode": null
+    },
+    {
+      "id": "varn",
+      "nom": "Varn",
+      "age": 63,
+      "sexe": "homme",
+      "role": "Conteur et narrateur",
+      "personnalite": [
+        "sage",
+        "mélancolique",
+        "malicieux"
+      ],
+      "competences": [
+        "mémoire",
+        "récits",
+        "conseil"
+      ],
+      "ambition": "Que rien ne soit oublié.",
+      "secret": {
+        "texte": "Sa légende du Mont des Étoiles est un vrai souvenir déformé de la chute des Anciens.",
+        "revele": false
+      },
+      "apparence": {
+        "couleur_signature": "gris",
+        "accessoire": "manteau gris, yeux voilés",
+        "description": "Presque aveugle, longs cheveux blancs, s'appuie sur Bo."
+      },
+      "voix": "Âgée, profonde, voix de conteur.",
+      "statut": "vivant",
+      "protege_jusqu_episode": 30
+    },
+    {
+      "id": "mira",
+      "nom": "Mira",
+      "age": 24,
+      "sexe": "femme",
+      "role": "Pêcheuse",
+      "personnalite": [
+        "douce",
+        "médiatrice",
+        "intuitive"
+      ],
+      "competences": [
+        "pêche",
+        "nage",
+        "apaiser les conflits"
+      ],
+      "ambition": "Garder la paix.",
+      "secret": {
+        "texte": "Elle entend des chants venant de la Forêt Mystérieuse : un autre peuple vit là.",
+        "revele": false
+      },
+      "apparence": {
+        "couleur_signature": "bleu",
+        "accessoire": "collier de coquillages bleus",
+        "description": "Cheveux longs souvent mouillés, sourire timide."
+      },
+      "voix": "Douce, mélodieuse.",
+      "statut": "vivant",
+      "protege_jusqu_episode": null
+    }
+  ],
+  "relations": [
+    {
+      "a": "taro",
+      "b": "ile",
+      "type": "couple",
+      "intensite": 80
+    },
+    {
+      "a": "taro",
+      "b": "bo",
+      "type": "parent",
+      "intensite": 70
+    },
+    {
+      "a": "ile",
+      "b": "bo",
+      "type": "parent",
+      "intensite": 90
+    },
+    {
+      "a": "nala",
+      "b": "mira",
+      "type": "soeurs",
+      "intensite": 85
+    },
+    {
+      "a": "grumm",
+      "b": "taro",
+      "type": "rivalite",
+      "intensite": 60
+    },
+    {
+      "a": "grumm",
+      "b": "varn",
+      "type": "vieille_amitie",
+      "intensite": 75
+    },
+    {
+      "a": "varn",
+      "b": "bo",
+      "type": "mentor",
+      "intensite": 80
+    },
+    {
+      "a": "ruka",
+      "b": "grumm",
+      "type": "alliance_fragile",
+      "intensite": 50
+    },
+    {
+      "a": "oren",
+      "b": "sena",
+      "type": "mefiance",
+      "intensite": 40
+    },
+    {
+      "a": "nala",
+      "b": "grumm",
+      "type": "defi",
+      "intensite": 55
+    }
+  ],
+  "arcs": [
+    {
+      "id": "survie",
+      "episodes": "1-5",
+      "fil": "Faim, abris, feu, premiers dangers, premières règles."
+    },
+    {
+      "id": "agriculture",
+      "episodes": "6-10",
+      "declencheur": "secret d'Ilé",
+      "fil": "Culture, élevage, troc, première monnaie (Oren)."
+    },
+    {
+      "id": "pouvoir",
+      "episodes": "11-15",
+      "declencheur": "rivalité Grumm–Taro",
+      "fil": "Naissance d'un chef, premières inégalités."
+    },
+    {
+      "id": "conflits",
+      "episodes": "16-20",
+      "declencheur": "vol d'Oren, visions de Ruka",
+      "fil": "Trahisons, alliances, premier affrontement."
+    },
+    {
+      "id": "peuple_cache",
+      "episodes": "16-30",
+      "declencheur": "chants entendus par Mira",
+      "fil": "Premier contact, diplomatie ou guerre."
+    },
+    {
+      "id": "anciens",
+      "episodes": "1-100",
+      "declencheur": "outil de Bo, secret de Grumm, légende de Varn",
+      "fil": "Découverte progressive de la chute des Anciens ; risque de répéter leurs erreurs."
+    }
+  ],
+  "regles_vote": {
+    "options_par_vote": 3,
+    "votes_minimum": 10,
+    "si_insuffisant": "Le destin décide (option tirée au sort, annoncée comme telle).",
+    "exigences": [
+      "Aucune option clairement meilleure.",
+      "Chaque option a un coût visible.",
+      "La conséquence apparaît dès l'épisode suivant."
+    ],
+    "source": "Issue GitHub 'VOTE' du dépôt tribu"
+  },
+  "historique": [],
+  "prompts": {
+    "style_base": "Vallée imaginaire épique, illustration 3D stylisée, couleurs saturées, éclairage cinématographique, cohérence avec la carte de référence.",
+    "negatif": "magie, lueurs surnaturelles, cristaux magiques, créatures fantastiques, texte, logo, watermark, bâtiments non présents dans etat_monde",
+    "format": "9:16"
+  }
+}

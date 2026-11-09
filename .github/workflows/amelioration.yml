@@ -1,0 +1,44 @@
+name: Amélioration continue
+
+# Après chaque production (et chaque dimanche) : analyse des mesures, backlog des défauts,
+# réglage automatique BORNÉ de la qualité de rendu. Le réglage n'est enregistré que si les tests
+# et un rendu de contrôle réussissent avec lui. Le code du moteur n'est jamais modifié ici.
+on:
+  workflow_run:
+    workflows: ["Production quotidienne"]
+    types: [completed]
+  schedule:
+    - cron: "41 20 * * 0"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: production
+  cancel-in-progress: false
+
+jobs:
+  analyser:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: main }
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq blender ffmpeg xvfb python3-pytest python3-numpy python3-pil
+      - name: Backlog + réglage proposé
+        id: tune
+        run: |
+          python3 -m studio.improve backlog
+          python3 -m studio.improve autotune | tee /tmp/tune.log
+          grep -q "CHANGED=1" /tmp/tune.log && echo "changed=true" >> $GITHUB_OUTPUT || echo "changed=false" >> $GITHUB_OUTPUT
+      - name: Tests avec le nouveau réglage
+        if: steps.tune.outputs.changed == 'true'
+        run: python3 -m pytest -q
+      - name: Enregistrer
+        run: |
+          git config user.name "studio-bot"; git config user.email "studio-bot@users.noreply.github.com"
+          git add improvements/ CHANGELOG.md
+          git commit -qm "Amélioration continue : analyse et réglages" || exit 0
+          for i in 1 2 3; do git pull -q --rebase && git push -q && break || sleep 5; done

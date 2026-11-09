@@ -1,0 +1,17 @@
+{
+ "_note": "Bibliothèque de gestes (rotations en radians, pivots du personnage). Ajouter des gestes ici ; ne pas modifier un geste existant sans test visuel (tests/test_animation.py).",
+ "_axes": "Personnage tourné vers -Y. shoulder.x<0 = bras vers l'avant ; shoulder.y = écarter (signe selon côté, appliqué automatiquement) ; elbow.x<0 = plier vers l'avant ; chest.x>0 = se pencher en avant.",
+ "point":        {"dur": 1.6, "hold": 0.9, "joints": {"shoulder_R": [-1.45, 0.15, 0], "elbow_R": [-0.1, 0, 0], "chest": [0.05, 0, -0.1]}},
+ "wave":         {"dur": 1.8, "hold": 1.2, "joints": {"shoulder_R": [-0.3, 2.3, 0], "elbow_R": [-1.2, 0, 0]}, "wiggle": {"joint": "elbow_R", "axis": 1, "amp": 0.45, "freq": 2.5}},
+ "arms_crossed": {"dur": 3.0, "hold": 2.4, "joints": {"shoulder_L": [-0.55, 0.15, 0.5], "elbow_L": [-1.7, 0, 0.3], "shoulder_R": [-0.6, 0.15, -0.5], "elbow_R": [-1.7, 0, -0.3]}},
+ "hands_hips":   {"dur": 3.0, "hold": 2.4, "joints": {"shoulder_L": [0.2, 0.75, 0], "elbow_L": [-1.6, 0, 0.6], "shoulder_R": [0.2, 0.75, 0], "elbow_R": [-1.6, 0, -0.6]}},
+ "think":        {"dur": 2.4, "hold": 1.6, "joints": {"shoulder_R": [-0.9, 0.2, -0.2], "elbow_R": [-2.1, 0, -0.2], "head": [-0.12, 0, 0.1]}},
+ "shrug":        {"dur": 1.4, "hold": 0.6, "joints": {"shoulder_L": [-0.4, 0.5, 0], "elbow_L": [-1.3, 0, 0], "shoulder_R": [-0.4, 0.5, 0], "elbow_R": [-1.3, 0, 0], "chest": [0, 0, 0], "neck": [0, 0.15, 0]}},
+ "open_arms":    {"dur": 2.0, "hold": 1.2, "joints": {"shoulder_L": [-0.6, 0.9, 0], "elbow_L": [-0.4, 0, 0], "shoulder_R": [-0.6, 0.9, 0], "elbow_R": [-0.4, 0, 0], "chest": [-0.05, 0, 0]}},
+ "fear":         {"dur": 2.0, "hold": 1.4, "joints": {"shoulder_L": [-0.5, 0.1, 0.3], "elbow_L": [-1.9, 0, 0], "shoulder_R": [-0.5, 0.1, -0.3], "elbow_R": [-1.9, 0, 0], "chest": [0.18, 0, 0], "head": [0.1, 0, 0]}},
+ "stop":         {"dur": 1.6, "hold": 1.0, "joints": {"shoulder_R": [-1.35, 0.2, 0], "elbow_R": [-1.0, 0, 0], "chest": [-0.05, 0, 0]}},
+ "fist":         {"dur": 1.4, "hold": 0.7, "joints": {"shoulder_R": [-0.9, 0.3, 0], "elbow_R": [-1.9, 0, 0], "chest": [0.08, 0, 0]}},
+ "kneel_work":   {"dur": 3.5, "hold": 3.0, "joints": {"chest": [0.55, 0, 0], "shoulder_L": [-1.0, 0.1, 0], "shoulder_R": [-1.0, 0.1, 0], "elbow_L": [-0.6, 0, 0], "elbow_R": [-0.6, 0, 0], "hip_L": [-0.9, 0, 0], "knee_L": [1.6, 0, 0], "hip_R": [-0.3, 0, 0], "knee_R": [1.9, 0, 0]}, "hips_drop": 0.32},
+ "warm_hands":   {"dur": 3.0, "hold": 2.4, "joints": {"shoulder_L": [-1.0, 0.25, 0.2], "elbow_L": [-0.7, 0, 0], "shoulder_R": [-1.0, 0.25, -0.2], "elbow_R": [-0.7, 0, 0], "chest": [0.12, 0, 0]}},
+ "lean_staff":   {"dur": 3.0, "hold": 2.5, "joints": {"shoulder_R": [-0.35, 0.25, 0], "elbow_R": [-0.9, 0, 0], "chest": [0.06, 0, 0]}}
+}

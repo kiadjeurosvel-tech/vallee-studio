@@ -1,0 +1,18 @@
+{
+ "series": "La Vallée des Horizons",
+ "language": "fr",
+ "publish_hour_berlin": 9,
+ "llm": {
+  "models": [
+   {"repo": "bartowski/Qwen2.5-7B-Instruct-GGUF", "file": "Qwen2.5-7B-Instruct-Q4_K_M.gguf", "license": "Apache-2.0"},
+   {"repo": "bartowski/Qwen2.5-1.5B-Instruct-GGUF", "file": "Qwen2.5-1.5B-Instruct-Q4_K_M.gguf", "license": "Apache-2.0"}
+  ],
+  "attempts": 3
+ },
+ "render": {
+  "max_jobs": 12,
+  "target_job_minutes": 22,
+  "economy_if_private": true
+ },
+ "episode": {"target_seconds": [45, 75]}
+}

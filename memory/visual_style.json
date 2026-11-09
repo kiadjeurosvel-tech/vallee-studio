@@ -1,0 +1,110 @@
+{
+ "_note": "Style visuel de référence. 'render' peut évoluer via improvements/ (bornes dans 'tuning_bounds'). Le reste est figé.",
+ "look": "3D stylisée chaleureuse, proportions légèrement cartoon (tête +15 %), matériaux mats, éclairage cinématographique doux, brume atmosphérique.",
+ "output": {
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "vcodec": "libx264",
+  "crf": 19,
+  "preset": "medium",
+  "pix_fmt": "yuv420p",
+  "acodec": "aac",
+  "abitrate": "192k"
+ },
+ "render": {
+  "engine": "BLENDER_EEVEE",
+  "res_x": 720,
+  "res_y": 1280,
+  "samples": 8,
+  "volumetrics": true,
+  "soft_shadows": true,
+  "gtao": true,
+  "bloom": true,
+  "dof": true
+ },
+ "tuning_bounds": {
+  "res_x": [
+   540,
+   1080
+  ],
+  "samples": [
+   4,
+   32
+  ]
+ },
+ "time_of_day": {
+  "dawn": {
+   "sun_elev": 8,
+   "sun_az": 80,
+   "sun_color": "#ffb27a",
+   "sun_strength": 3.0,
+   "sky_top": "#5d7fb8",
+   "sky_horizon": "#ffc38f",
+   "ambient": 0.35,
+   "fog_color": "#f2c8a8"
+  },
+  "day": {
+   "sun_elev": 48,
+   "sun_az": 140,
+   "sun_color": "#fff1dc",
+   "sun_strength": 4.0,
+   "sky_top": "#3f7fd0",
+   "sky_horizon": "#cfe3f2",
+   "ambient": 0.55,
+   "fog_color": "#d8e6f0"
+  },
+  "dusk": {
+   "sun_elev": 6,
+   "sun_az": 250,
+   "sun_color": "#ff8a4a",
+   "sun_strength": 3.6,
+   "sky_top": "#4a5590",
+   "sky_horizon": "#f4a46a",
+   "ambient": 0.45,
+   "fog_color": "#b8928a"
+  },
+  "night": {
+   "sun_elev": 35,
+   "sun_az": 200,
+   "sun_color": "#8fa8ff",
+   "sun_strength": 1.4,
+   "sky_top": "#0d1838",
+   "sky_horizon": "#2a3a6a",
+   "ambient": 0.32,
+   "fog_color": "#2a3658"
+  }
+ },
+ "camera": {
+  "sensor_height": 36,
+  "lens": {
+   "wide": 20,
+   "medium": 32,
+   "close": 55,
+   "over_shoulder": 45
+  },
+  "fstop": {
+   "wide": 11,
+   "medium": 4,
+   "close": 2.2,
+   "over_shoulder": 2.8
+  },
+  "handheld": 0.004
+ },
+ "subtitles": {
+  "font": "DejaVu Sans",
+  "size": 62,
+  "bold": true,
+  "outline_px": 5,
+  "shadow": 2,
+  "margin_v": 430,
+  "max_chars": 30
+ },
+ "transitions": {
+  "crossfade_frames": 12
+ },
+ "shot": {
+  "min_s": 1.8,
+  "max_s": 7.5
+ }
+}

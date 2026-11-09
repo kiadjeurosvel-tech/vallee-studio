@@ -1,0 +1,60 @@
+{
+  "title": "Les dix premiers",
+  "lines": [
+    {
+      "speaker": "VARN",
+      "text": "Je m'appelle Varn. Je me souviens de tout. Même du jour où nous n'étions que dix."
+    },
+    {
+      "speaker": "VARN",
+      "text": "Dix survivants. Sans nom, sans loi, sans maison. Juste une vallée immense… et la faim."
+    },
+    {
+      "speaker": "BO",
+      "text": "Grumm ! Regarde ! De l'eau partout, et des arbres violets !"
+    },
+    {
+      "speaker": "GRUMM",
+      "text": "Reste près du feu, Bo. Une vallée trop belle cache toujours ses dents."
+    },
+    {
+      "speaker": "RUKA",
+      "text": "Il nous reste deux jours de nourriture. Pas un de plus."
+    },
+    {
+      "speaker": "VARN",
+      "text": "Cette nuit-là, nous avons dressé deux abris. Les premiers de toute notre histoire."
+    },
+    {
+      "speaker": "BO",
+      "text": "Grumm… là-haut, sur le rocher. Ce sont des murs ? Qui les a construits ?"
+    },
+    {
+      "speaker": "GRUMM",
+      "text": "Personne. Et personne n'y monte. Jamais."
+    },
+    {
+      "speaker": "VARN",
+      "text": "Je connaissais Grumm depuis trente ans. C'était la première fois que je le voyais avoir peur."
+    },
+    {
+      "speaker": "VARN",
+      "text": "Le lendemain, Nala voulut partir seule chercher à manger, loin. Grumm refusa. Ce jour-là, c'est vous qui avez tranché."
+    }
+  ],
+  "choice": {
+    "question": "Plus que deux jours de vivres. Que faire ?",
+    "A": "Chasser tous ensemble dans la forêt violette",
+    "B": "Laisser Nala partir seule, plus loin"
+  },
+  "caption": "Deux jours de nourriture. Nala veut partir seule. Grumm refuse. Vous décidez. Vote A ou B 👇",
+  "hashtags": [
+    "#lavalleedeshorizons",
+    "#serie",
+    "#civilisation",
+    "#histoire",
+    "#vote",
+    "#fantasy"
+  ],
+  "summary": "Dix survivants arrivent dans une vallée vierge et inconnue, sans loi ni maison. Ils dressent deux abris près de la rivière et n'ont que deux jours de nourriture. Bo aperçoit des ruines sur le Rocher des Anciens ; Grumm, visiblement effrayé, interdit à quiconque d'y monter. Varn, le conteur, raconte cette histoire des années plus tard. Nala veut partir seule chercher de la nourriture ; Grumm refuse."
+}

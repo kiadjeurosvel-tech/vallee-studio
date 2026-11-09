@@ -1,0 +1,101 @@
+{
+ "meta": {
+  "titre": "La Vallée des Horizons",
+  "slogan": "Notre monde. Nos choix.",
+  "phrase_signature": "Ce monde n'existe que par vos choix. Et chaque erreur restera dans son histoire.",
+  "langue": "fr",
+  "version": 1,
+  "episode_actuel": 0,
+  "annee_monde": 1,
+  "image_episode_1": "assets/vallee_ep1.png"
+ },
+ "canon": {
+  "genre": "Monde imaginaire épique, sans aucun surnaturel",
+  "regles": [
+   "Aucune magie, aucune créature fantastique, aucune lueur surnaturelle.",
+   "Tout s'explique par la nature, la technique ou les décisions humaines.",
+   "Les montagnes et les cours d'eau ne changent jamais de position.",
+   "Les bâtiments évoluent mais restent à leur emplacement.",
+   "Les villages peuvent devenir des villes ; les routes peuvent être construites.",
+   "Les forêts peuvent être détruites ou étendues.",
+   "Les frontières évoluent selon les décisions.",
+   "Chaque changement historique reste visible dans les épisodes suivants.",
+   "Une décision votée ne peut jamais être annulée."
+  ]
+ },
+ "narrator": {
+  "actuel": "varn",
+  "succession": [
+   "bo"
+  ],
+  "formule_ouverture": "Je m'appelle Varn. Je me souviens de tout.",
+  "regle": "Le narrateur raconte chaque épisode. À sa mort, le suivant de la liste reprend la chronique."
+ },
+ "arcs": [
+  {
+   "id": "survie",
+   "episodes": "1-5",
+   "fil": "Faim, abris, feu, premiers dangers, premières règles."
+  },
+  {
+   "id": "agriculture",
+   "episodes": "6-10",
+   "declencheur": "secret d'Ilé",
+   "fil": "Culture, élevage, troc, première monnaie (Oren)."
+  },
+  {
+   "id": "pouvoir",
+   "episodes": "11-15",
+   "declencheur": "rivalité Grumm–Taro",
+   "fil": "Naissance d'un chef, premières inégalités."
+  },
+  {
+   "id": "conflits",
+   "episodes": "16-20",
+   "declencheur": "vol d'Oren, visions de Ruka",
+   "fil": "Trahisons, alliances, premier affrontement."
+  },
+  {
+   "id": "peuple_cache",
+   "episodes": "16-30",
+   "declencheur": "chants entendus par Mira",
+   "fil": "Premier contact, diplomatie ou guerre."
+  },
+  {
+   "id": "anciens",
+   "episodes": "1-100",
+   "declencheur": "outil de Bo, secret de Grumm, légende de Varn",
+   "fil": "Découverte progressive de la chute des Anciens ; risque de répéter leurs erreurs."
+  }
+ ],
+ "state": {
+  "population": 10,
+  "nourriture": 30,
+  "eau": 80,
+  "bois": 10,
+  "pierre": 0,
+  "moral": 60,
+  "sante": 70,
+  "note_echelle": "Valeurs de 0 à 100 sauf population.",
+  "batiments": [
+   {
+    "type": "abri",
+    "nombre": 2,
+    "lieu": "village_premiers"
+   },
+   {
+    "type": "feu de camp",
+    "nombre": 1,
+    "lieu": "village_premiers"
+   }
+  ],
+  "technologies": [
+   "feu (entretenu, pas encore maîtrisé)",
+   "outils en pierre taillée"
+  ],
+  "decouvertes": [],
+  "routes": [],
+  "frontieres": []
+ },
+ "history": []
+}
