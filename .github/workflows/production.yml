@@ -116,8 +116,14 @@ jobs:
           path: work/current/shots
           key: shots-${{ needs.preparer.outputs.episode }}-${{ matrix.chunk }}-${{ github.run_id }}
           restore-keys: shots-${{ needs.preparer.outputs.episode }}-${{ matrix.chunk }}-
-      - name: Blender
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq blender ffmpeg xvfb fonts-dejavu-core
+      - name: "Blender (cache des paquets, évite les miroirs apt lents)"
+        uses: awalsh128/cache-apt-pkgs-action@v1.4.3
+        continue-on-error: true
+        with: { packages: blender ffmpeg xvfb fonts-dejavu-core, version: "1" }
+      - name: Vérifier Blender
+        run: |
+          command -v blender && blender --version | head -1 && command -v xvfb-run \
+            || (sudo apt-get update -qq && sudo apt-get install -y -qq blender ffmpeg xvfb fonts-dejavu-core)
       - name: Rendu
         id: r1
         continue-on-error: true
@@ -189,13 +195,13 @@ jobs:
         with: { python-version: "3.12", cache: pip, cache-dependency-path: requirements.txt }
       - run: pip install -q -r requirements.txt
       - uses: actions/download-artifact@v4
-        with: { name: final, path: work/current/final }
+        with: { name: final, path: work/current }
       - name: Attendre 09:00 (Berlin)
         if: ${{ !inputs.no_wait && github.event_name == 'schedule' }}
         run: python -m studio.wait_until 9
       - name: Préparer le paquet
         run: |
-          mv work/current/final/episode.json work/current/episode.json
+          ls -R work/current | head -30
           N=$(printf "%03d" ${{ needs.preparer.outputs.episode }})
           mkdir -p livraison && cp work/current/final/vallee_ep${N}.mp4 work/current/final/vallee_ep${N}.png \
             work/current/final/vallee_ep${N}.srt work/current/final/legende.txt work/current/final/qa.md livraison/
