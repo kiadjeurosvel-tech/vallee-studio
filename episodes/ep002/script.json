@@ -1,0 +1,78 @@
+{
+ "title": "Le feu qui faiblit",
+ "location": "village_premiers",
+ "tod": "dusk",
+ "weather": "clear",
+ "mood": "tension",
+ "lines": [
+  {
+   "speaker": "VARN",
+   "text": "Je me souviens du soir où notre feu a failli mourir. La veille, nous avions choisi : laisser nala partir seule, plus loin.",
+   "emotion": "worried",
+   "gesture": null
+  },
+  {
+   "speaker": "TARO",
+   "text": "Le bois est mouillé. Si la flamme s'éteint, nous ne savons pas la rallumer.",
+   "emotion": "fear",
+   "gesture": "warm_hands"
+  },
+  {
+   "speaker": "ILE",
+   "text": "Alors gardons-la. Chacun son tour, toute la nuit.",
+   "emotion": "determined",
+   "gesture": "fist"
+  },
+  {
+   "speaker": "RUKA",
+   "text": "Et demain ? Nous passerons nos vies à surveiller une flamme ?",
+   "emotion": "angry",
+   "gesture": "open_arms"
+  },
+  {
+   "speaker": "VARN",
+   "text": "Ils avaient raison tous les deux. C'est souvent comme ça que naissent les vraies disputes.",
+   "emotion": "neutral",
+   "gesture": null
+  },
+  {
+   "speaker": "TARO",
+   "text": "Il faut apprendre à faire naître le feu. Avec des pierres, avec du bois sec, peu importe.",
+   "emotion": "neutral",
+   "gesture": "think"
+  },
+  {
+   "speaker": "ILE",
+   "text": "Apprendre prend du temps. Le froid, lui, n'attend pas.",
+   "emotion": "worried",
+   "gesture": "arms_crossed"
+  },
+  {
+   "speaker": "VARN",
+   "text": "Cette nuit-là, personne n'a dormi. Et au matin, il fallait choisir.",
+   "emotion": "neutral",
+   "gesture": null
+  }
+ ],
+ "choice": {
+  "question": "Comment protéger le feu ?",
+  "A": "Veiller la flamme jour et nuit",
+  "B": "Chercher comment l'allumer seuls"
+ },
+ "caption": "Le feu qui faiblit — que doit faire la vallée ? Vote A ou B 👇",
+ "hashtags": [
+  "#lavalleedeshorizons",
+  "#serie",
+  "#animation",
+  "#histoire",
+  "#vote"
+ ],
+ "summary": "Dix survivants arrivent dans une vallée vierge et inconnue, sans loi ni maison. Ils dressent deux abris près de la rivière et n'ont que deux jours de nourriture. Bo aperçoit des ruines sur le Rocher des Anciens ; Grumm, visiblement effrayé, interdit à quiconque d'y monter. Varn, le conteur, raconte cette histoire des années plus tard. Nala veut partir seule chercher de la nourriture ; Grumm refuse. Épisode 2 : le feu qui faiblit.",
+ "world_changes": {},
+ "source": "gabarit",
+ "number": 2,
+ "date": "2026-11-10",
+ "vote": "B",
+ "vote_source": "le destin (aucun vote)",
+ "status": "en_production"
+}
